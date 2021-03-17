@@ -65,3 +65,6 @@
 
 + **S4L: Self-Supervised Semi-Supervised Learning**
 > 在半监督框架下引入自监督，为有标签和无标签样本同时产生旋转角度预测Loss，为有标签样本产生分类Loss。
+
++ **In Defense of Pseudo-Labeling: An Uncertainty-Aware Pseudo-label Selection Framework for Semi-Supervised Learning**
+> 提出一种改进伪标签的半监督算法，由于使用错误的伪标签会导致模型向着错误的方向学习发展，因此需要提高伪标签的可靠性。本文采用了预测可信度和不确定性同时筛选非常可靠和非常不可靠的伪标签，其中非常可靠的伪标签即使用普通的交叉熵产生Loss，非常不可靠的伪标签使用改进的负交叉熵产生Loss，因而在保证伪标签可靠性的同时，使用负学习更充分地利用了非常不可靠的伪标签信息，从而使得伪标签方法能够获得和基于一致性的半监督方法相近的性能。
