@@ -68,3 +68,9 @@
 
 + **In Defense of Pseudo-Labeling: An Uncertainty-Aware Pseudo-label Selection Framework for Semi-Supervised Learning**
 > 提出一种改进伪标签的半监督算法，由于使用错误的伪标签会导致模型向着错误的方向学习发展，因此需要提高伪标签的可靠性。本文采用了预测可信度和不确定性同时筛选非常可靠和非常不可靠的伪标签，其中非常可靠的伪标签即使用普通的交叉熵产生Loss，非常不可靠的伪标签使用改进的负交叉熵产生Loss，因而在保证伪标签可靠性的同时，使用负学习更充分地利用了非常不可靠的伪标签信息，从而使得伪标签方法能够获得和基于一致性的半监督方法相近的性能。
+
++ **Invariant Information Clustering for Unsupervised Image Classification and Segmentation**
+> 提出一种基于互信息最大化的聚类方法，能够直接应用于图像分类和图像分割。首先通过数据增强构造样本对，采用孪生网络结构得出样本对的聚类软标签，最大化样本对软标签之间的互信息用以训练网络，同时可加入辅助聚类分支，使用其他无关类别数据以提升特征提取器能力。
+
++ **Learning Discrete Representations via Information Maximizing Self-Augmented Training**
+> 通过最大化模型输入输出之间的互信息，以及最小化增强样本和原始样本输出之间的交叉熵，实现离散表征的学习，可用于无监督聚类和哈希学习。
