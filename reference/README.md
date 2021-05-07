@@ -77,3 +77,6 @@
 
 + **Learning Deep Representation by Mutual Information Estimation and Maximization**
 > 核心思想是通过最大化同一张图片内局部特征和全局特征之间的互信息实现表征学习。首先将图片分为M×M个子块，每个子块分别提取特征得到局部特征，再将所有子块特征融合得到全局特征，将同一张图片的局部特征和全局特征作为相似样本对，将全局特征和另一张图片的局部特征作为不相似样本对。除此之外，为了使得所提取特征能够含有某些利于下游任务的特性，如正交性等，引入判别器使得所提取特征与先验分布尽可能匹配。
+
++ **Learning Representations by Maximizing Mutual Information Across Views**
+> AMDIM是基于DIM的改进方法，首先使用同一张图片两次不同数据增强后分别用于提取全局特征和局部特征，并且在不同特征尺度上进行正样本对构造，实现多尺度的互信息最大化，同时使用更强大的encoder以及混合特征进一步提升性能。
