@@ -80,3 +80,6 @@
 
 + **Learning Representations by Maximizing Mutual Information Across Views**
 > AMDIM是基于DIM的改进方法，首先使用同一张图片两次不同数据增强后分别用于提取全局特征和局部特征，并且在不同特征尺度上进行正样本对构造，实现多尺度的互信息最大化，同时使用更强大的encoder以及混合特征进一步提升性能。
+
++ **Barlow Twins: Self-Supervised Learning via Redundancy Reduction**
+> 提出一种不同于样本级别的特征级别的对比学习损失函数，将两种不同数据增强后的样本输入孪生网络中得到两组特征，计算两组特征之间的交叉相关系数矩阵，约束使其接近单位阵进行训练，从而实现不同特征之间冗余信息的剔除，同时使得相似样本所提取到的特征接近。
