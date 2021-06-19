@@ -83,3 +83,6 @@
 
 + **Barlow Twins: Self-Supervised Learning via Redundancy Reduction**
 > 提出一种不同于样本级别的特征级别的对比学习损失函数，将两种不同数据增强后的样本输入孪生网络中得到两组特征，计算两组特征之间的交叉相关系数矩阵，约束使其接近单位阵进行训练，从而实现不同特征之间冗余信息的剔除，同时使得相似样本所提取到的特征接近。
+
++ **Bootstrap Your Own Latent A New Approach to Self-Supervised Learning**
+> 提出一种无需负样本的对比学习方法BYOL，首先对同一张图片进行两次不同的数据增强，将生成的两张增强图片分别输入online网络和target网络（其中target网络参数由online网络动量更新得到），使得online网络提取的特征prediction与target网络提取的特征projection尽可能接近，由于采用非对称网络结构，因此能够在没有负样本的情况下避免模型坍塌的问题。
