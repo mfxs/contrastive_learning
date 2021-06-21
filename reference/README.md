@@ -86,3 +86,6 @@
 
 + **Bootstrap Your Own Latent A New Approach to Self-Supervised Learning**
 > 提出一种无需负样本的对比学习方法BYOL，首先对同一张图片进行两次不同的数据增强，将生成的两张增强图片分别输入online网络和target网络（其中target网络参数由online网络动量更新得到），使得online网络提取的特征prediction与target网络提取的特征projection尽可能接近，由于采用非对称网络结构，因此能够在没有负样本的情况下避免模型坍塌的问题。
+
++ **Exploring Simple Siamese Representation Learning**
+> 提出一种简单的孪生网络SimSiam，用于实现无监督表征学习，其整体模型结构和BYOL基本一样（除了去掉了momentum，感觉没有什么区别）。
