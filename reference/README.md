@@ -89,3 +89,6 @@
 
 + **Exploring Simple Siamese Representation Learning**
 > 提出一种简单的孪生网络SimSiam，用于实现无监督表征学习，其整体模型结构和BYOL基本一样（除了去掉了momentum，感觉没有什么区别）。
+
++ **OpenMatch: Open-set Consistency Regularization for Semi-supervised Learning with Outliers**
+> 一种考虑无标签数据中outliers（这里的outliers定义为有标签数据中未出现过的类别）的半监督算法，采用OVA的思想在提取的特征后接上K个二分类器，用于区分inliers和outliers，当K分类器给出概率最大类别对应二分类器判定为outliers时认为该无标签样本为outliers，采用有标签数据、无标签数据熵最小化（使得inliers和outliers的概率差异化增强）和一致性正则项（使得模型输出平滑）对K个二分类器进行训练，采用交叉熵和FixMatch对K分类器进行训练。
