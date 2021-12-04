@@ -92,3 +92,6 @@
 
 + **OpenMatch: Open-set Consistency Regularization for Semi-supervised Learning with Outliers**
 > 一种考虑无标签数据中outliers（这里的outliers定义为有标签数据中未出现过的类别）的半监督算法，采用OVA的思想在提取的特征后接上K个二分类器，用于区分inliers和outliers，当K分类器给出概率最大类别对应二分类器判定为outliers时认为该无标签样本为outliers，采用有标签数据、无标签数据熵最小化（使得inliers和outliers的概率差异化增强）和一致性正则项（使得模型输出平滑）对K个二分类器进行训练，采用交叉熵和FixMatch对K分类器进行训练。
+
++ **CoDiM: Learning with Noisy Labels via Contrastive Semi-Supervised Learning**
+> 首先提出CSSL来结合对比学习和半监督学习，利用自监督对比学习进行encoder的训练，再基于encoder结合自监督对比学习、有监督对比学习和半监督学习进行分类器的训练，使得自监督不仅发挥预训练的功能，同时辅助半监督的学习。在CSSL的基础上提出CoDiM进一步解决标签噪声问题，利用自监督对比学习进行encoder的训练，此步并未使用所有的标签信息，再将GMM聚类过程中训练损失低的样本视为标签纯净样本，其余作为标签有噪的无标签样本，最后使用对比学习和半监督学习进行分类器的训练。
