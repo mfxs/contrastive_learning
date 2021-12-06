@@ -95,3 +95,6 @@
 
 + **CoDiM: Learning with Noisy Labels via Contrastive Semi-Supervised Learning**
 > 首先提出CSSL来结合对比学习和半监督学习，利用自监督对比学习进行encoder的训练，再基于encoder结合自监督对比学习、有监督对比学习和半监督学习进行分类器的训练，使得自监督不仅发挥预训练的功能，同时辅助半监督的学习。在CSSL的基础上提出CoDiM进一步解决标签噪声问题，利用自监督对比学习进行encoder的训练，此步并未使用所有的标签信息，再将GMM聚类过程中训练损失低的样本视为标签纯净样本，其余作为标签有噪的无标签样本，最后使用对比学习和半监督学习进行分类器的训练。
+
++ **DivideMix: Learning with Noisy Labels as Semi-supervised Learning**
+> 整体上是一种结合SSL思想用于LNL的方法，首先利用Co-Divide将数据集划分为纯净部分和有噪部分，纯净部分视为有标签，有噪部分视为无标签，再采用SSL方法，并轮流进行这两部分。Co-Divide利用包含两个成分的GMM对样本损失（交叉熵）进行拟合，得到每个样本为纯净样本的概率，根据阈值划分纯净样本和有噪样本，将划分结果传递给另一个模型；采用MixMatch的SSL方法，做了label co-refinement和label co-guessing的改进，label co-refinement针对有标签样本，将原始标签和数据增强后样本估计结果按照纯净概率加权融合，label co-guessing针对无标签样本，将两个模型的结果一起用于伪标签计算。
