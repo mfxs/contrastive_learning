@@ -98,3 +98,6 @@
 
 + **DivideMix: Learning with Noisy Labels as Semi-supervised Learning**
 > 整体上是一种结合SSL思想用于LNL的方法，首先利用Co-Divide将数据集划分为纯净部分和有噪部分，纯净部分视为有标签，有噪部分视为无标签，再采用SSL方法，并轮流进行这两部分。Co-Divide利用包含两个成分的GMM对样本损失（交叉熵）进行拟合，得到每个样本为纯净样本的概率，根据阈值划分纯净样本和有噪样本，将划分结果传递给另一个模型；采用MixMatch的SSL方法，做了label co-refinement和label co-guessing的改进，label co-refinement针对有标签样本，将原始标签和数据增强后样本估计结果按照纯净概率加权融合，label co-guessing针对无标签样本，将两个模型的结果一起用于伪标签计算。
+
++ **CoSSL: Co-Learning of Representation and Classifier for Imbalanced Semi-Supervised Learning**
+> 提出一种类别不平衡场景下的半监督方法。构建了表征学习、伪标签生成和分类器学习三个模块，表征学习模块的编码器采用EMA方式提供给另外两个模块，分类器学习模块的分类器直接共享给伪标签生成模块，另外分类器学习模块采用TFE策略将有标签数据和无标签数据混合来增加少样本类别的数据多样性，三个模块互相促进使得最终提升在类别不平衡场景下的半监督效果。
