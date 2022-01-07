@@ -101,3 +101,6 @@
 
 + **CoSSL: Co-Learning of Representation and Classifier for Imbalanced Semi-Supervised Learning**
 > 提出一种类别不平衡场景下的半监督方法。构建了表征学习、伪标签生成和分类器学习三个模块，表征学习模块的编码器采用EMA方式提供给另外两个模块，分类器学习模块的分类器直接共享给伪标签生成模块，另外分类器学习模块采用TFE策略将有标签数据和无标签数据混合来增加少样本类别的数据多样性，三个模块互相促进使得最终提升在类别不平衡场景下的半监督效果。
+
++ **Revisiting Consistency Regularization for Semi-Supervised Learning**
+> 在一致性正则项的基础上提出将弱增强样本和强增强样本在特征空间中尽可能分离，使得同一类别的样本能够在特征空间内占据更大范围，从而有助于泛化性能提升。同时引入了自监督任务辅助半监督学习。
