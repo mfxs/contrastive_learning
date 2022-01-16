@@ -104,3 +104,6 @@
 
 + **Revisiting Consistency Regularization for Semi-Supervised Learning**
 > 在一致性正则项的基础上提出将弱增强样本和强增强样本在特征空间中尽可能分离，使得同一类别的样本能够在特征空间内占据更大范围，从而有助于泛化性能提升。同时引入了自监督任务辅助半监督学习。
+
++ **A Novel Maximum Mean Discrepancy-Based Semi-Supervised Learning Algorithm**
+> 提出一种基于MMD的半监督分类算法，其基本思路和self-training一样，通过将伪标签置信度高的无标签样本纳入有标签样本，迭代训练更新模型，区别在于伪标签置信度高的无标签样本的选择基于无标签样本k-means聚类结果和分类器分类结果之间的MMD，将MMD值最小的类对应的无标签样本纳入有标签样本集。
