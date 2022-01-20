@@ -107,3 +107,6 @@
 
 + **A Novel Maximum Mean Discrepancy-Based Semi-Supervised Learning Algorithm**
 > 提出一种基于MMD的半监督分类算法，其基本思路和self-training一样，通过将伪标签置信度高的无标签样本纳入有标签样本，迭代训练更新模型，区别在于伪标签置信度高的无标签样本的选择基于无标签样本k-means聚类结果和分类器分类结果之间的MMD，将MMD值最小的类对应的无标签样本纳入有标签样本集。
+
++ **Barely-Supervised Learning: Semi-Supervised Learning with very few labeled images**
+> 所提方法针对每个类别有标签样本极少的场景，FixMatch等半监督方法对无标签样本的置信度普遍较低，无法实现有效的半监督学习。因此在无标签样本置信度较高的情况下将弱增强样本的伪标签作为强增强样本的训练目标，在无标签样本置信度较低的情况下采用聚类结果作为训练目标，同时提出两种优化伪标签的方式，第一种没太看懂，第二种是针对不同类别采用不同的置信度阈值，从而对置信度高的无标签样本少的类别降低阈值。
