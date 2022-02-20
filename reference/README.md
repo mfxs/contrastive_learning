@@ -110,3 +110,6 @@
 
 + **Barely-Supervised Learning: Semi-Supervised Learning with very few labeled images**
 > 所提方法针对每个类别有标签样本极少的场景，FixMatch等半监督方法对无标签样本的置信度普遍较低，无法实现有效的半监督学习。因此在无标签样本置信度较高的情况下将弱增强样本的伪标签作为强增强样本的训练目标，在无标签样本置信度较低的情况下采用聚类结果作为训练目标，同时提出两种优化伪标签的方式，第一种没太看懂，第二种是针对不同类别采用不同的置信度阈值，从而对置信度高的无标签样本少的类别降低阈值。
+
++ **Learning from Temporal Gradient for Semi-supervised Action Recognition**
+> 提出了一种针对视频场景考虑时序信息的半监督算法。首先提出了TG (Temporal Gradient)，感觉就是做了差分预处理，然后将原始RGB数据和TG数据分别作为两种模态并行建立两个模型，整体上使用了FixMatch的半监督框架，同时设计了Cross-modal Dense Feature Alignment和Cross-modal Contrastive Learning两个模块，来对RGB模型和TG模型所提取的特征进行一致性约束和对比约束。
